@@ -58,13 +58,12 @@ class _DashboardPageState extends State<DashboardPage> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    Navigator.push(
+                    Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailsPage(
-                          firstName: firstNameController.text,
-                          lastName: lastNameController.text,
-                        ),
+                      '/details',
+                      arguments: DetailsPage(
+                        firstName: firstNameController.text,
+                        lastName: lastNameController.text,
                       ),
                     );
                   } else {

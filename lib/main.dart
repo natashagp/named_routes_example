@@ -1,7 +1,5 @@
-import 'package:first_app/src/pages/dashboard_page.dart';
+import 'package:first_app/route_generator.dart';
 import 'package:first_app/src/pages/home_page.dart';
-import 'package:first_app/src/pages/profile_page.dart';
-import 'package:first_app/src/pages/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,13 +18,8 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/dashboard': (context) => DashboardPage(),
-        '/profile': (context) => ProfilePage(),
-        '/search': (context) => SearchPage(),
-      },
+      home: HomePage(),
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
