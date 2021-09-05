@@ -1,4 +1,4 @@
-# first_app
+# named_routes_params
 
 A new Flutter project.
 
